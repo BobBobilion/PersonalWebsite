@@ -1,8 +1,7 @@
-import PageLayout from "../PageLayout/PageLayout";
 
 export default function Portfolio() {
   return (
-    <PageLayout>
+    <>
       <h1>Portfolio</h1>
       <p style={{ marginTop: "1rem" }}>Here are some of the projects I’ve worked on recently:</p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "1rem", marginTop: "2rem" }}>
@@ -10,7 +9,7 @@ export default function Portfolio() {
         <ProjectCard title="E-Commerce Dashboard" desc="Admin dashboard with analytics and CRUD features." />
         <ProjectCard title="Travel Blog App" desc="Blog app for travelers with rich media support." />
       </div>
-    </PageLayout>
+    </>
   );
 }
 

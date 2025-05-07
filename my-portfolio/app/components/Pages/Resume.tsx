@@ -1,8 +1,7 @@
-import PageLayout from "../PageLayout/PageLayout";
 
 export default function Resume() {
   return (
-    <PageLayout>
+    <>
       <h1>Resume</h1>
       <p style={{ marginTop: "1rem" }}>Download my resume or check out my past experience and education below.</p>
       <section style={{ marginTop: "2rem" }}>
@@ -17,6 +16,6 @@ export default function Resume() {
           <li>🎓 B.Sc. in Computer Science – Kathmandu University</li>
         </ul>
       </section>
-    </PageLayout>
+    </>
   );
 }

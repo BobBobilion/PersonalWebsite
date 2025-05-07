@@ -15,7 +15,7 @@ export default function Sidebar() {
         borderRadius: "20px",
         border: "1px solid #333",
         boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
-        margin: "2rem",
+        // margin: "2rem",
         color: "white",
         position: "sticky",
         top: "2rem",

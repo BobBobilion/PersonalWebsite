@@ -1,32 +1,54 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 
-const tabs = [
-  { title: "About", path: "/" },
-  { title: "Resume", path: "/resume" },
-  { title: "Portfolio", path: "/portfolio" },
-  { title: "Contact", path: "/contact" },
-];
+type Tab = "about" | "resume" | "portfolio" | "contact";
 
-export default function Header() {
-  const pathname = usePathname();
+export default function Header({
+  selectedTab,
+  setSelectedTab
+}: {
+  selectedTab: Tab;
+  setSelectedTab: (tab: Tab) => void;
+}) {
+  const tabs: Tab[] = ["about", "resume", "portfolio", "contact"];
 
   return (
-    <nav style={{ display: "flex", gap: "2rem", padding: "1rem", borderBottom: "1px solid #333" }}>
-      {tabs.map(tab => (
-        <Link
-          key={tab.path}
-          href={tab.path}
-          style={{
-            fontWeight: pathname === tab.path ? "bold" : "normal",
-            textDecoration: pathname === tab.path ? "underline" : "none",
-            color: "white"
-          }}
-        >
-          {tab.title}
-        </Link>
-      ))}
-    </nav>
+    <div style={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-end",
+      paddingBottom: "1rem",
+      borderBottom: "1px solid #333"
+    }}>
+      <h1 style={{ fontSize: "2rem", fontWeight: "bold", margin: 0 }}>{
+        selectedTab.charAt(0).toUpperCase() + selectedTab.slice(1)
+      }</h1>
+
+      <div style={{
+        background: "#1f1f1f",
+        borderRadius: "16px 16px 0 0",
+        padding: "0.5rem 1rem",
+        display: "flex",
+        gap: "1.5rem"
+      }}>
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setSelectedTab(tab)}
+            style={{
+              background: "none",
+              border: "none",
+              fontSize: "1rem",
+              fontWeight: selectedTab === tab ? "bold" : "normal",
+              color: selectedTab === tab ? "#facc15" : "#ccc",
+              cursor: "pointer",
+              paddingBottom: "0.2rem"
+            }}
+          >
+            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }

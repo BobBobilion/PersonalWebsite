@@ -1,8 +1,7 @@
-import PageLayout from "../PageLayout/PageLayout";
 
 export default function About() {
   return (
-    <PageLayout>
+    <>
       <section>
         <h1>About Me</h1>
         <p style={{ marginTop: "1rem", lineHeight: "1.6" }}>
@@ -23,7 +22,7 @@ export default function About() {
           <Card title="Backend Development" desc="High-performance backend services designed for scalability and seamless UX." />
         </div>
       </section>
-    </PageLayout>
+    </>
   );
 }
 
