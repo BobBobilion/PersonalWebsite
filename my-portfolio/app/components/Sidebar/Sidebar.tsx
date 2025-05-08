@@ -22,51 +22,65 @@ export default function Sidebar() {
         height: "fit-content"
       }}
     >
-      <div style={{ textAlign: "center" }}>
-        <Image
-          src="/avatar.png"
-          alt="Avatar"
-          width={100}
-          height={100}
-          style={{ borderRadius: "20px" }}
-        />
-        <h1 style={{ marginTop: "1rem", fontSize: "1.75rem", fontWeight: "700" }}>
-  Radin Ahmadizadeh
-</h1>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div
+          style={{
+            background: "#3d3d3d",
+            padding: "1rem",
+            borderRadius: "20%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "160px",
+            height: "160px"
+          }}
+        >
+          <Image
+            src="/avatar3.png"
+            alt="Avatar"
+            width={120}
+            height={120}
+            style={{ borderRadius: "16px" }}
+          />
+        </div>
 
-<div
-  style={{
-    background: "#2d2d2d",
-    padding: "0.25rem 0.75rem",
-    borderRadius: "10px",
-    display: "inline-block",
-    marginTop: "0.5rem",
-    fontSize: "0.75rem", // 👈 slightly smaller
-    fontWeight: "500",
-    opacity: 0.85
-  }}
->
-  Software Developer
-</div>
+        <h1 style={{ marginTop: "1rem", fontSize: "1.75rem", fontWeight: "700" }}>
+          Radin Ahmadizadeh
+        </h1>
+
+        <div
+          style={{
+            background: "#2d2d2d",
+            padding: "0.25rem 0.75rem",
+            borderRadius: "10px",
+            display: "inline-block",
+            marginTop: "0.5rem",
+            fontSize: "0.75rem", // 👈 slightly smaller
+            fontWeight: "500",
+            opacity: 0.85
+          }}
+        >
+          Software Developer
+        </div>
       </div>
 
       <hr style={{ margin: "1.5rem 0", borderColor: "#444" }} />
 
       <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
         <InfoBlock
-          icon={<Mail size={20} color="#FFD700" />}
+          icon={<Mail size={20} color="#eaca69" />}
           label="EMAIL"
           text="RadinAhmadi174@..."
           valueToCopy="RadinAhmadi174@gmail.com"
         />
         <InfoBlock
-          icon={<Phone size={20} color="#FFD700" />}
+          icon={<Phone size={20} color="#eaca69" />}
           label="PHONE"
           text="(949) 560 - 1116"
           valueToCopy="9495601116"
         />
         <InfoBlock
-          icon={<MapPin size={20} color="#FFD700" />}
+          icon={<MapPin size={20} color="#eaca69" />}
           label="LOCATION"
           text="Irvine, CA"
           valueToCopy="Irvine, CA"

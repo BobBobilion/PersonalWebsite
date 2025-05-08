@@ -2,7 +2,6 @@
 export default function Contact() {
   return (
     <>
-      <h1>Contact</h1>
       <p style={{ marginTop: "1rem" }}>Feel free to reach out to me via email or the form below.</p>
       <form style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "400px" }}>
         <input type="text" placeholder="Your Name" style={inputStyle} />

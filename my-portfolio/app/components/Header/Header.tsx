@@ -13,24 +13,51 @@ export default function Header({
   const tabs: Tab[] = ["about", "resume", "portfolio", "contact"];
 
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "flex-end",
-      paddingBottom: "1rem",
-      borderBottom: "1px solid #333"
-    }}>
-      <h1 style={{ fontSize: "2rem", fontWeight: "bold", margin: 0 }}>{
-        selectedTab.charAt(0).toUpperCase() + selectedTab.slice(1)
-      }</h1>
-
-      <div style={{
-        background: "#1f1f1f",
-        borderRadius: "16px 16px 0 0",
-        padding: "0.5rem 1rem",
+    <div
+      style={{
+        position: "relative",
         display: "flex",
-        gap: "1.5rem"
-      }}>
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        paddingBottom: "1rem",
+        borderBottom: "1px solid #333"
+      }}
+    >
+      {/* Page title */}
+      <h1 style={{ fontSize: "2rem", fontWeight: 600, margin: 0 }}>
+        {selectedTab.charAt(0).toUpperCase() + selectedTab.slice(1)}
+      </h1>
+
+      {/* Notch background shape */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-2rem",
+          right: "-2rem",
+          width: "400px", // Adjust as needed
+          height: "115%",
+          background: "#282829",
+          border: "1px solid #383838",
+          borderTop: "none",
+          borderTopRightRadius: "1rem",
+          borderBottomLeftRadius: "1rem",
+          zIndex: 0
+        }}
+      />
+
+      {/* Tab buttons */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 1,
+          background: "transparent",
+          padding: "0.5rem 1rem",
+          display: "flex",
+          gap: "1.5rem",
+          alignSelf: "flex-start",
+          marginTop: "-1rem"
+        }}
+      >
         {tabs.map((tab) => (
           <button
             key={tab}
@@ -40,7 +67,7 @@ export default function Header({
               border: "none",
               fontSize: "1rem",
               fontWeight: selectedTab === tab ? "bold" : "normal",
-              color: selectedTab === tab ? "#facc15" : "#ccc",
+              color: selectedTab === tab ? "#eaca69" : "#ccc",
               cursor: "pointer",
               paddingBottom: "0.2rem"
             }}

@@ -3,7 +3,6 @@ export default function About() {
   return (
     <>
       <section>
-        <h1>About Me</h1>
         <p style={{ marginTop: "1rem", lineHeight: "1.6" }}>
           A passionate Flutter developer with strong expertise in cross-platform apps, REST APIs, UI/UX, widgets, and state management solutions.
           Proven track record in delivering cutting-edge solutions, including API integration, third-party libraries, and performance optimization.

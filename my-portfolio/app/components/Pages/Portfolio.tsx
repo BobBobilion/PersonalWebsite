@@ -2,7 +2,6 @@
 export default function Portfolio() {
   return (
     <>
-      <h1>Portfolio</h1>
       <p style={{ marginTop: "1rem" }}>Here are some of the projects I’ve worked on recently:</p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "1rem", marginTop: "2rem" }}>
         <ProjectCard title="MyApp UI" desc="Cross-platform social app with real-time chat." />

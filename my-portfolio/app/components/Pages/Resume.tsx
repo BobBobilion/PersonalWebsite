@@ -2,7 +2,6 @@
 export default function Resume() {
   return (
     <>
-      <h1>Resume</h1>
       <p style={{ marginTop: "1rem" }}>Download my resume or check out my past experience and education below.</p>
       <section style={{ marginTop: "2rem" }}>
         <h2>Experience</h2>
