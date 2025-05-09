@@ -173,7 +173,7 @@ function Section({
             position: "absolute",
             left: 0,
             top: 0,
-            height: `calc(100% - ${cutHeight - 25}px)`,
+            height: `calc(100% - ${cutHeight - 27}px)`,
             width: "2px",
             background: "#353535",
             transform: "translateX(2px) translateY(-25px)"
@@ -206,7 +206,7 @@ const TimelineItem = forwardRef<HTMLDivElement, {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          transform: "translateX(-7px)",
+          transform: "translateX(-7px) translateY(1px)",
           zIndex: 1
         }}
       >
