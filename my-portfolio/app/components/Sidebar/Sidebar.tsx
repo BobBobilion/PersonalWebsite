@@ -44,7 +44,7 @@ export default function Sidebar() {
           />
         </div>
 
-        <h1 style={{ marginTop: "1rem", fontSize: "1.75rem", fontWeight: "700" }}>
+        <h1 style={{ marginTop: "1rem", fontSize: "2rem", fontWeight: "700" }}>
           Radin Ahmadizadeh
         </h1>
 
@@ -52,10 +52,10 @@ export default function Sidebar() {
           style={{
             background: "#2d2d2d",
             padding: "0.25rem 0.75rem",
-            borderRadius: "10px",
+            borderRadius: "7px",
             display: "inline-block",
             marginTop: "0.5rem",
-            fontSize: "0.75rem", // 👈 slightly smaller
+            fontSize: "0.75rem",
             fontWeight: "500",
             opacity: 0.85
           }}
@@ -152,7 +152,7 @@ function SocialIcon({ name, href }: { name: string; href: string }) {
         textDecoration: "none"
       }}
       onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
-      onMouseLeave={(e) => (e.currentTarget.style.color = "#ccc")}
+      onMouseLeave={(e) => (e.currentTarget.style.color = "#ddd")}
     >
       <ion-icon name={name} style={{ fontSize: "1.4rem" }} />
     </a>

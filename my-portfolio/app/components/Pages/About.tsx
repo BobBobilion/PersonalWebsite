@@ -2,15 +2,18 @@
 export default function About() {
   return (
     <>
-      <section>
+      <section style={{ color: "#d6d6d6" }}>
         <p style={{ marginTop: "1rem", lineHeight: "1.6" }}>
-          A passionate Flutter developer with strong expertise in cross-platform apps, REST APIs, UI/UX, widgets, and state management solutions.
-          Proven track record in delivering cutting-edge solutions, including API integration, third-party libraries, and performance optimization.
+          I'm a Computer Engineering student at UC Irvine with a strong background in software development, automation, and embedded systems. I bring a hands-on, full-stack approach to engineering, backed by professional experience with AWS, serverless architecture, and industrial control systems.
         </p>
-        <p style={{ marginTop: "1rem" }}>
-          If you're seeking a skilled Flutter developer to breathe life into your project and exceed your expectations, I'm here to collaborate.
+        <p style={{ marginTop: "1rem", lineHeight: "1.6" }}>
+          My experience ranges from building scalable cloud APIs with Python and AWS Lambda to designing and programming PLCs and HMI machines for custom industrial automation. I've also led award-winning hackathon teams, conducted environmental research using machine learning, and taught coding to over 20 students in a charitable bootcamp I founded.
+        </p>
+        <p style={{ marginTop: "1rem", lineHeight: "1.6" }}>
+          I'm always looking to bridge hardware and software, solve meaningful problems, and build tools that are efficient, scalable, and user-focused.
         </p>
       </section>
+
 
       <section style={{ marginTop: "2rem" }}>
         <h2>What I'm Doing</h2>

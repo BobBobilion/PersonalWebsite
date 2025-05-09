@@ -34,13 +34,13 @@ export default function Header({
           position: "absolute",
           top: "-2rem",
           right: "-2rem",
-          width: "400px", // Adjust as needed
-          height: "115%",
+          width: "500px", // Adjust as needed
+          height: "100%",
           background: "#282829",
           border: "1px solid #383838",
           borderTop: "none",
-          borderTopRightRadius: "1rem",
-          borderBottomLeftRadius: "1rem",
+          borderTopRightRadius: "1.25rem",
+          borderBottomLeftRadius: "1.25rem",
           zIndex: 0
         }}
       />
@@ -51,9 +51,9 @@ export default function Header({
           position: "relative",
           zIndex: 1,
           background: "transparent",
-          padding: "0.5rem 1rem",
+          padding: "0.2rem 1.5rem",
           display: "flex",
-          gap: "1.5rem",
+          gap: "3rem",
           alignSelf: "flex-start",
           marginTop: "-1rem"
         }}
