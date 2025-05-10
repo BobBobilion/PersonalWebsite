@@ -38,7 +38,7 @@ export default function Resume() {
   }, []);
   return (
     <div style={{ padding: "1rem 0", color: "#d6d6d6" }}>
-      <DownloadResumeButton />
+      {/* <DownloadResumeButton /> */}
 
       <Section title="Education" icon={<GraduationCap size={20} color="#ffdb70" />} cutHeight={eduHeight}>
         <TimelineItem
@@ -84,7 +84,7 @@ export default function Resume() {
         />
       </Section>
       
-      <Section title="Projects" icon={<FlaskConical size={20} color="#ffdb70" />} cutHeight={projectsHeight}>
+      {/* <Section title="Projects" icon={<FlaskConical size={20} color="#ffdb70" />} cutHeight={projectsHeight}>
         <TimelineItem
           title="Environmental Research Project"
           subtitle="Developer, Researcher"
@@ -119,8 +119,9 @@ export default function Resume() {
             "Bear Jams: 2nd (2022, UC Berkeley)"
           ]}
         />
-      </Section>
+      </Section> */}
 
+      <DownloadResumeButton />
 
     </div>
   );
@@ -260,54 +261,142 @@ const TimelineItem = forwardRef<HTMLDivElement, {
 
 TimelineItem.displayName = "TimelineItem";
 
+// function DownloadResumeButton() {
+//   return (
+//     <div
+//       style={{
+//         position: "fixed",
+//         bottom: "3rem",
+//         right: "12rem",
+//         zIndex: 999
+//       }}
+//     >
+//       {/* Background container */}
+//       <div
+//         style={{
+//           background: "#1e1e1e",          // solid black backdrop
+//           display: "inline-block",
+//           borderRadius: "10px",
+//         }}
+//       >
+//         <a
+//           href="/Resume - Radin Ahmadizadeh.pdf"
+//           download
+//           style={{
+//             background: "linear-gradient(135deg, #2a2a2a, #1a1a1a)",
+//             borderRadius: "10px",
+//             border: "1px solid #3d3d3d",
+//             padding: "0.9rem 1.25rem",
+//             color: "#ffdb70",
+//             textDecoration: "none",
+//             display: "flex",
+//             alignItems: "center",
+//             gap: "0.5rem",
+//             fontWeight: 500,
+//             fontSize: "1rem",
+//             transition: "all 0.15s ease"
+//           }}
+//           onMouseEnter={(e) => {
+//             e.currentTarget.style.background = "linear-gradient(120deg, rgba(255, 219, 112, 0.1) 30%, #202023 70%)";
+//             e.currentTarget.style.border = "1px solid #ffdb70";
+//           }}
+//           onMouseLeave={(e) => {
+//             e.currentTarget.style.background = "linear-gradient(135deg, #2a2a2a, #1a1a1a)";
+//             e.currentTarget.style.border = "1px solid #3d3d3d";
+//           }}
+//         >
+//           <FileText size={18} />
+//           Download CV
+//         </a>
+//       </div>
+//     </div>
+//   );
+// }
+
 function DownloadResumeButton() {
-  return (
+  const [isPinned, setIsPinned] = useState(false);
+  const anchorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const offset = 100; // 👈 adjust this value to delay pinning
+
+    const handleScroll = () => {
+      if (!anchorRef.current) return;
+
+      const rect = anchorRef.current.getBoundingClientRect();
+      const bottomVisible = rect.top <= window.innerHeight && rect.bottom + offset <= window.innerHeight;
+      
+      setIsPinned(bottomVisible);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Shared button element
+  const button = (
     <div
       style={{
-        position: "fixed",
-        bottom: "3rem",
-        right: "12rem",
-        zIndex: 999
+        background: "#0f0f0f",
+        borderRadius: "13px",
+        padding: "0.15rem",
+        display: "inline-block"
       }}
     >
-      {/* Background container */}
-      <div
+      <a
+        href="/resume.pdf"
+        download
         style={{
-          background: "#1e1e1e",          // solid black backdrop
-          display: "inline-block",
+          background: "linear-gradient(135deg, #2a2a2a, #1a1a1a)",
           borderRadius: "10px",
+          border: "1px solid #3d3d3d",
+          padding: "0.75rem 1.25rem",
+          color: "#ffdb70",
+          textDecoration: "none",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          fontWeight: 500,
+          fontSize: "0.9rem",
+          transition: "all 0.15s ease"
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = "linear-gradient(120deg, rgba(255, 219, 112, 0.1) 30%, #202023 70%)";
+          e.currentTarget.style.border = "1px solid #ffdb70";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = "linear-gradient(135deg, #2a2a2a, #1a1a1a)";
+          e.currentTarget.style.border = "1px solid #3d3d3d";
         }}
       >
-        <a
-          href="/Resume - Radin Ahmadizadeh.pdf"
-          download
+        <FileText size={18} />
+        Download CV
+      </a>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Anchor element to detect scroll position */}
+      <div ref={anchorRef} style={{ height: "1px" }} />
+
+      {isPinned ? (
+        // Docked inside layout
+        <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "2rem", marginRight: "2rem"}}>
+          {button}
+        </div>
+      ) : (
+        // Floating in bottom-right corner
+        <div
           style={{
-            background: "linear-gradient(135deg, #2a2a2a, #1a1a1a)",
-            borderRadius: "10px",
-            border: "1px solid #3d3d3d",
-            padding: "0.9rem 1.25rem",
-            color: "#ffdb70",
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            fontWeight: 500,
-            fontSize: "1rem",
-            transition: "all 0.15s ease"
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "linear-gradient(120deg, rgba(255, 219, 112, 0.1) 30%, #202023 70%)";
-            e.currentTarget.style.border = "1px solid #ffdb70";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "linear-gradient(135deg, #2a2a2a, #1a1a1a)";
-            e.currentTarget.style.border = "1px solid #3d3d3d";
+            position: "fixed",
+            right: "14rem",
+            bottom: "3rem",
+            zIndex: 999
           }}
         >
-          <FileText size={18} />
-          Download CV
-        </a>
-      </div>
-    </div>
+          {button}
+        </div>
+      )}
+    </>
   );
 }

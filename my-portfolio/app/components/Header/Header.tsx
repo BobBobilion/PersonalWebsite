@@ -51,9 +51,9 @@ export default function Header({
           position: "relative",
           zIndex: 1,
           background: "transparent",
-          padding: "0.2rem 1.5rem",
+          padding: "0.2rem 0rem",
           display: "flex",
-          gap: "3rem",
+          gap: "1rem",
           alignSelf: "flex-start",
           marginTop: "-1rem"
         }}
@@ -69,11 +69,14 @@ export default function Header({
               fontWeight: selectedTab === tab ? "bold" : "normal",
               color: selectedTab === tab ? "#eaca69" : "#ccc",
               cursor: "pointer",
-              paddingBottom: "0.2rem"
+              paddingBottom: "0.2rem",
+              minWidth: "100px",        // ✅ consistent width across tabs
+              textAlign: "center"      // ✅ centers the text inside
             }}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </button>
+
         ))}
       </div>
     </div>
