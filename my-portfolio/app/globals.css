@@ -55,3 +55,28 @@ html {
   background: #f9eeb0; /* light yellow */
   color: #000;         /* optional: darker text for contrast */
 }
+
+input:not(:placeholder-shown), textarea:not(:empty) {
+  border: 1px solid #bfbfbf !important;
+}
+input:hover, textarea:hover {
+  border: 1px solid #ffdb70 !important;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #ffdb70 !important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus {
+  /* background-color: #1c1c1c !important; */
+  color: #fafafa !important;
+  border-radius: 12px !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1c1c1c inset !important;
+  -webkit-text-fill-color: #fafafa !important;
+  /* transition: background-color 9999s ease-in-out 0s; */
+}
+

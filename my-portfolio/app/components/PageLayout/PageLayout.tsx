@@ -1,6 +1,7 @@
 import Sidebar from "../Sidebar/Sidebar";
 
 export default function PageLayout({ children }: { children: React.ReactNode }) {
+  
   return (
     <div
       style={{

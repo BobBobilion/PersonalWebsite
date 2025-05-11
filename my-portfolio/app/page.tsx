@@ -10,11 +10,18 @@ import Contact from "./components/Pages/Contact";
 export default function HomePage() {
   const [selectedTab, setSelectedTab] = useState<"about" | "resume" | "portfolio" | "contact">("about");
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
   const renderPage = () => {
     switch (selectedTab) {
       case "resume": return <Resume />;
       case "portfolio": return <Portfolio />;
-      case "contact": return <Contact />;
+      case "contact": return <Contact form={formData} setForm={setFormData} />;
       default: return <About />;
     }
   };
