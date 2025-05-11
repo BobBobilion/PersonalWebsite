@@ -16,7 +16,7 @@ export default function Sidebar() {
         border: "1px solid #333",
         boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
         // margin: "2rem",
-        color: "white",
+        color: "#fafafa",
         position: "sticky",
         top: "2rem",
         height: "fit-content"
@@ -25,7 +25,7 @@ export default function Sidebar() {
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div
           style={{
-            background: "#3d3d3d",
+            background: "linear-gradient(135deg, #363636, #2a2a2a)",
             padding: "1rem",
             borderRadius: "20%",
             display: "flex",
@@ -111,7 +111,8 @@ function InfoBlock({
 
   const handleCopy = () => {
     navigator.clipboard.writeText(valueToCopy);
-    toast.success(`${label} copied!`);
+    const copyText = label[0] + label.slice(1).toLowerCase();
+    toast.success(`${copyText} copied!`);
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
   };

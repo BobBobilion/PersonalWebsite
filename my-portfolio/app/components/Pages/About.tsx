@@ -1,3 +1,11 @@
+import {
+  Server,
+  Cpu,
+  Terminal,
+  Users
+} from "lucide-react";
+import { ReactNode } from "react";
+
 
 export default function About() {
   return (
@@ -16,29 +24,88 @@ export default function About() {
 
 
       <section style={{ marginTop: "2rem" }}>
-        <h2>What I'm Doing</h2>
+        <h2 style={{ fontSize: "1.75rem", fontWeight: 600 }}>What I'm Doing</h2>
+
         <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1rem" }}>
-          <Card title="Mobile Apps" desc="Professional development of applications for Android and iOS." />
-          <Card title="Web Development" desc="High-quality development of sites at the professional level." />
-          <Card title="UI/UX Design" desc="The most modern and high-quality design made at a professional level." />
-          <Card title="Backend Development" desc="High-performance backend services designed for scalability and seamless UX." />
+          <Card
+            title="Serverless Engineering"
+            icon={<Server size={36} color="#ffdb70" />}
+            desc={<>Building scalable backends using <strong>AWS Lambda</strong> and <strong>Python</strong>.</>}
+          />
+
+          <Card
+            title="Industrial Automation"
+            icon={<Cpu size={36} color="#ffdb70" />}
+            desc={<>Programming machines with <strong>PLCs</strong> and <strong>HMI software</strong>.</>}
+          />
+
+          <Card
+            title="Tooling & Scripting"
+            icon={<Terminal size={36} color="#ffdb70" />}
+            desc={<>Automating workflows with <strong>Python</strong> and <strong>SQL</strong> scripts.</>}
+          />
+
+          <Card
+            title="Teaching & Mentorship"
+            icon={<Users size={36} color="#ffdb70" />}
+            desc={<>Leading <strong>bootcamps</strong> and mentoring <strong>CS students</strong>.</>}
+          />
         </div>
       </section>
+
+
+
     </>
   );
 }
 
-function Card({ title, desc }: { title: string; desc: string }) {
+function Card({
+  title,
+  desc,
+  icon
+}: {
+  title: string;
+  desc: React.ReactNode;
+  icon: React.ReactNode;
+}) {
   return (
-    <div style={{
-      flex: "1 1 40%",
-      background: "#2a2a2a",
-      padding: "1rem",
-      borderRadius: "12px",
-      minWidth: "250px"
-    }}>
-      <h3>{title}</h3>
-      <p style={{ marginTop: "0.5rem" }}>{desc}</p>
+    <div
+      style={{
+        flex: "1 1 40%",
+        padding: "2px",
+        borderRadius: "12px",
+        background: "linear-gradient(155deg, #555 0%, #282828 35%)",
+        minWidth: "250px",
+        transition: "transform 0.1s ease-in-out",
+        transform: "scale(1)"
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "scale(1.015)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "scale(1)";
+      }}
+    >
+      <div
+        style={{
+          background: "#2a2a2a",
+          borderRadius: "10px",
+          padding: "1rem",
+          height: "100%",
+          display: "flex",
+          alignItems: "flex-start", // 👈 aligns icon to the top
+          gap: "1rem"
+        }}
+      >
+        {/* Icon on the left, larger */}
+        <div style={{ flexShrink: 0, paddingTop: "0.4rem"}}>{icon}</div>
+
+        {/* Text content */}
+        <div>
+          <h3 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#fafafa", marginBottom: "0.4rem" }}>{title}</h3>
+          <p style={{ fontSize: "0.85rem", color: "#d6d6d6", margin: 0 }}>{desc}</p>
+        </div>
+      </div>
     </div>
   );
 }

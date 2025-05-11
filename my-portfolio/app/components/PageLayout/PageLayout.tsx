@@ -17,11 +17,11 @@ export default function PageLayout({ children }: { children: React.ReactNode }) 
         style={{
           flex: 1,
           background: "#1e1e1e",
-          color: "white",
+          color: "#fafafa",
           border: "1px solid #333",
           borderRadius: "20px", // 👈 rounded corners
           padding: "2rem",
-          overflow: "hidden", // keeps content clean inside
+          // overflow: "hidden", // keeps content clean inside
           boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4)"
         }}
       >
