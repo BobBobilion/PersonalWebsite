@@ -12,7 +12,7 @@ const projects = [
     link: "https://predictbase.app"
   },
   {
-    title: "Ambition Guru",
+    title: "Photobooth",
     role: "UI/UX Designer",
     year: 2022,
     description: "E-learning platform offering test preparation, quizzes, and tutorials.",
