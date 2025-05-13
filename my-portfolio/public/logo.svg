@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100" height="100">
+  <defs>
+    <linearGradient id="predictbase-gradient" gradientTransform="rotate(25)" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0076DD"/>
+      <stop offset="100%" stop-color="#00CDE9"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#predictbase-gradient)" d="M9.382 8.675h13.943v13.943L32 31.293V0H.707zM22.618 23.325H8.675V9.382L0 .707V32h31.293z"/>
+</svg>
