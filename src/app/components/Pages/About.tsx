@@ -5,6 +5,7 @@ import {
   Users
 } from "lucide-react";
 import { ReactNode } from "react";
+import Skills from "../Skills/Skills";
 
 
 export default function About() {
@@ -51,6 +52,8 @@ export default function About() {
             desc={<>Leading <strong>bootcamps</strong> and mentoring <strong>CS students</strong>.</>}
           />
         </div>
+
+        <Skills />
       </section>
 
 

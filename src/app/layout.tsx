@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";// app/layout.tsx
-import "@/app/globals.css"; // ✅ Make sure this line exists
+import "@/src/app/globals.css"; // ✅ Make sure this line exists
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
