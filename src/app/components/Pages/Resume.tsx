@@ -86,6 +86,34 @@ export default function Resume() {
       
       <Section title="Projects" icon={<FlaskConical size={20} color="#ffdb70" />} cutHeight={projectsHeight}>
         <TimelineItem
+          title="Predict Base"
+          subtitle="Full Stack Developer"
+          time="Mar 2025 – Present"
+          details={[
+            "Market prediction app hosted on the Base blockchain, allowing users to create and bet on markets.",
+            "Scaled to over 1000 users and facilitated $15,000+ in prediction volume.",
+            "Technologies: React, TypeScript, GraphQL, AWS, Solidity"
+          ]}
+        />
+        <TimelineItem
+          title="Personal Portfolio Website"
+          subtitle="Full Stack Developer"
+          time="Apr 2025 – Jun 2025"
+          details={[
+            "Interactive React site with smooth navigation and custom components to highlight projects and skills.",
+            "Technologies: React, TypeScript, CSS"
+          ]}
+        />
+        <TimelineItem
+          title="Photo Booth App"
+          subtitle="Full Stack Developer"
+          time="Feb 2025 – Mar 2025"
+          details={[
+            "Arcade-style photo booth simulation with a simple UI and customizable photo capture experience.",
+            "Technologies: React, TypeScript, CSS"
+          ]}
+        />
+        <TimelineItem
           title="Environmental Research Project"
           subtitle="Developer, Researcher"
           time="Mar 2024 – Present"
@@ -101,8 +129,8 @@ export default function Resume() {
           subtitle="Founder, Head Instructor"
           time="Jul 2019 – Aug 2021"
           details={[
-            "Taught 20+ students Python over 2 summers, raising $3000 for charity.",
-            "Led 3 CS major teaching assistants and planned curriculum."
+            "Taught 20+ students Python over 2 summers, raising $3,000 for charity.",
+            "Led 3 teaching assistants and planned curriculum."
           ]}
         />
       </Section>
@@ -122,9 +150,9 @@ export default function Resume() {
       </Section>
 
       <DownloadResumeButton />
-
     </div>
   );
+
 }
 
 

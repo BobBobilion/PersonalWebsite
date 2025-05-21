@@ -9,8 +9,8 @@ const skills = [
   { name: "AWS", icon: "/AWS.svg", link: "https://aws.amazon.com/", padding: defaultPadding},
   { name: "Godot", icon: "/Godot.svg", link: "https://godotengine.org/", padding: "0rem"},
   { name: "GitHub", icon: "/GitHub.svg", link: "https://github.com/", padding: defaultPadding},
-  { name: "FactoryTalk", icon: "/FactoryTalk.svg", link: "https://www.rockwellautomation.com/", padding: defaultPadding},
-  { name: "Studio 5000", icon: "/Studio5000.svg", link: "https://www.rockwellautomation.com/", padding: defaultPadding},
+  { name: "FactoryTalk", icon: "/FactoryTalk.png", link: "https://www.rockwellautomation.com/", padding: "0rem"},
+  { name: "Studio 5000", icon: "/FactoryTalk.png", link: "https://www.rockwellautomation.com/", padding: "0rem"},
   { name: "Next JS", icon: "/NextJS.svg", link: "https://nextjs.org/", padding: defaultPadding},
   { name: "Postman", icon: "/Postman.svg", link: "https://www.postman.com/", padding: "0rem"},
 ];
