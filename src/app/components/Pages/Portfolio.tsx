@@ -51,7 +51,7 @@ const projects = [
     description: "Event based market prediction website hosted on the Base Blockchain. Built with modern web technologies and smart contract integration for seamless blockchain interactions.",
     img: "/predictLogo.png",
     link: "https://predictbase.app",
-    github: "https://github.com/yourusername/predict-base"
+    github: "https://github.com/BobBobilion"
   },
   {
     title: "Photobooth",
@@ -60,7 +60,7 @@ const projects = [
     description: "A photo booth app for individuals with a simple and clean UI. Features real-time photo capture, filters, and instant sharing capabilities.",
     img: "/photoBoothSS.png",
     link: "https://photosbyradin.netlify.app/",
-    github: "https://github.com/yourusername/photobooth"
+    github: "https://github.com/BobBobilion/PhotoBooth"
   }
 ];
 
