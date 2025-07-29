@@ -3,15 +3,15 @@ import styles from "./Skills.module.css";
 
 const defaultPadding = "1rem";
 const skills = [
+  { name: "Claude Code", icon: "/claude.svg", link: "https://docs.anthropic.com/en/docs/claude-code", padding: defaultPadding},
   { name: "Python", icon: "/Python.svg", link: "https://www.python.org/" , padding: defaultPadding},
   { name: "Java", icon: "/Java.svg", link: "https://www.java.com/", padding: defaultPadding},
   { name: "React", icon: "/React.svg", link: "https://reactjs.org/", padding: defaultPadding},
+  { name: "Next JS", icon: "/NextJS.svg", link: "https://nextjs.org/", padding: defaultPadding},
   { name: "AWS", icon: "/AWS.svg", link: "https://aws.amazon.com/", padding: defaultPadding},
   { name: "Godot", icon: "/Godot.svg", link: "https://godotengine.org/", padding: "0rem"},
   { name: "GitHub", icon: "/GitHub.svg", link: "https://github.com/", padding: defaultPadding},
   { name: "FactoryTalk", icon: "/FactoryTalk.png", link: "https://www.rockwellautomation.com/", padding: "0rem"},
-  { name: "Studio 5000", icon: "/FactoryTalk.png", link: "https://www.rockwellautomation.com/", padding: "0rem"},
-  { name: "Next JS", icon: "/NextJS.svg", link: "https://nextjs.org/", padding: defaultPadding},
   { name: "Postman", icon: "/Postman.svg", link: "https://www.postman.com/", padding: "0rem"},
 ];
 

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Radin Ahmadizadeh",
+  title: "Radin Ahmadizadeh",
   description: "Personal portfolio",
 };
 
@@ -30,6 +30,9 @@ export default function RootLayout({
       
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="icon" href="/avatar3.png" type="image/png" />
+        <link rel="shortcut icon" href="/avatar3.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/avatar3.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

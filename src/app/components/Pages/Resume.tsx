@@ -91,7 +91,7 @@ export default function Resume() {
           time="Mar 2025 – Present"
           details={[
             "Market prediction app hosted on the Base blockchain, allowing users to create and bet on markets.",
-            "Scaled to over 1000 users and facilitated $15,000+ in prediction volume.",
+            "Scaled to over 3000 users and facilitated $300,000+ in total prediction volume.",
             "Technologies: React, TypeScript, GraphQL, AWS, Solidity"
           ]}
         />
