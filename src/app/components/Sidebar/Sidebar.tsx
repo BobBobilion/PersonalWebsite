@@ -88,9 +88,8 @@ export default function Sidebar() {
       </div>
 
       <div style={{ marginTop: "2rem", display: "flex", justifyContent: "center", gap: "1rem" }}>
-        <SocialIcon name="logo-linkedin" href="https://www.linkedin.com/in/radin-ahmadizadeh-a4a4b0184/" />
-        <SocialIcon name="logo-github" href="https://github.com/bobBobilion" />
-
+        <SocialIcon icon={<Linkedin size={24} />} href="https://www.linkedin.com/in/radin-ahmadizadeh-a4a4b0184/" />
+        <SocialIcon icon={<Github size={24} />} href="https://github.com/bobBobilion" />
       </div>
     </aside>
   );
@@ -141,7 +140,7 @@ function InfoBlock({
   );
 }
 
-function SocialIcon({ name, href }: { name: string; href: string }) {
+function SocialIcon({ icon, href }: { icon: React.ReactNode; href: string }) {
   return (
     <a
       href={href}
@@ -155,7 +154,7 @@ function SocialIcon({ name, href }: { name: string; href: string }) {
       onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
       onMouseLeave={(e) => (e.currentTarget.style.color = "#ddd")}
     >
-      <ion-icon name={name} style={{ fontSize: "1.4rem" }} />
+      {icon}
     </a>
   );
 }
