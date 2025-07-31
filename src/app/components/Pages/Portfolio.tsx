@@ -6,6 +6,16 @@ import { useState } from "react";
 
 const projects = [
   {
+    title: "Bark & Moss",
+    role: "Game Developer",
+    year: 2024,
+    description: "A multiplayer survival game with open world exploration made in Godot entirely using AI. Features dynamic wilderness environments, cooperative gameplay mechanics, and intelligent AI-driven game systems.",
+    img: "/BarkAndMoss.png",
+    link: "https://github.com/BobBobilion/BarkAndMoss",
+    github: "https://github.com/BobBobilion/BarkAndMoss",
+    video: "https://www.loom.com/share/86d4295d092148b7a07a17e040f9df53?sid=a6abb363-63e9-40c2-b2a3-edb65049e1d0"
+  },
+  {
     title: "WordWise",
     role: "Full Stack Developer",
     year: 2024,
